@@ -12,6 +12,9 @@ void main() {
             Image.asset(
               'asset/img/logo.png',
             ),
+            CircularProgressIndicator(
+              color: Colors.white,
+            ),
           ],
         ),
       ),

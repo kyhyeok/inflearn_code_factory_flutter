@@ -8,35 +8,54 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          color: Colors.black,
-          child: Column(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: colors
+                  .map(
+                    (e) => Container(
+                      height: 50.0,
+                      width: 50.0,
+                      color: e,
+                    ),
+                  )
+                  .toList(),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
                   height: 50.0,
-                  width: 50.5,
-                  color: Colors.red,
-                ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Container(
-                  height: 50.0,
-                  width: 50.5,
+                  width: 50.0,
                   color: Colors.orange,
                 ),
-              ),
-              Expanded(
-                child: Container(
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: colors
+                  .map(
+                    (e) => Container(
+                      height: 50.0,
+                      width: 50.0,
+                      color: e,
+                    ),
+                  )
+                  .toList(),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
                   height: 50.0,
-                  width: 50.5,
-                  color: Colors.yellow,
+                  width: 50.0,
+                  color: Colors.green,
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );
